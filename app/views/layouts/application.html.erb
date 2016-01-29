@@ -9,25 +9,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header id= "main_navigation" class="clearfix">
-		<div id="leftHeader">
-			<a href="#"><img src="logo_biz.png" alt="Edmonton Business Directory" /></a>
-		</div>
-		<div id="rightHeader">
-			<nav>
-				<a href="#">Home</a>
-				<a href="#">About</a>
-				<a href="#">Categories</a>
-				<a href="#">Advertise</a>
-			</nav>
-			<form id="searchbox" action="">
-		    	<input id="search" type="text" placeholder="Search Businesses">
-		  		<input id="submit" type="submit" value="&#10148;">
-			</form>
-		</div>
-	</header>
+<header id= "main_navigation" class="clearfix">
+	<div id="leftHeader">
+		<%= link_to image_tag('logo_biz.png'), root_path %>
+	</div>
+	<div id="rightHeader">
+		<nav>
+			<%= link_to "Home", root_path %>
+			<a href="#">Categories</a>
+			<%= link_to "Business Listings", businesses_path %>
+			<a href="#">Advertise</a>
+		</nav>
+		<form id="searchbox" action="">
+		    <input id="search" type="text" placeholder="Search Businesses">
+		  	<input id="submit" type="submit" value="&#10148;">
+		</form>
+	</div>
+</header>
 
 <%= yield %>
 
+<footer id="main_footer">
+	<p class="copyright">
+		&copy; 2016 PaperAnchor Creative Studio  |  All Rights Reserved
+	</p>
+	<nav>
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-instagram"></i></a>
+		<a href="#"><i class="fa fa-youtube-play"></i></a>
+		<a href="#" class="login">LOGIN</a>
+	</nav>
+</footer>
 </body>
 </html>

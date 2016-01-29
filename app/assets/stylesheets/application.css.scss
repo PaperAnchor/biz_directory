@@ -98,6 +98,9 @@ p, ul, ol {
 				text-decoration: none;
 				margin: 0 1rem;
 				font-size: .9rem;
+				&:hover {
+					color: $highlight;
+				}
 			}
 		}
 		form {
@@ -225,7 +228,7 @@ p, ul, ol {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-		background: url(../images/down_arrow.png) $light no-repeat right;	
+		background: image-url('down_arrow.png') $light no-repeat right;	
 		option {
 			padding: 10px 10px;
 		}
@@ -244,7 +247,7 @@ p, ul, ol {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-		background: url(../images/down_arrow.png) $light no-repeat right;
+		background: image-url('down_arrow.png') $light no-repeat right;
 		option {
 			padding: 0 10px;
 		}
@@ -259,7 +262,7 @@ p, ul, ol {
 	}
 	#submit {
     padding:10px 15px 10px 15px; 
-		background: url(../images/right_arrow.png) $light no-repeat right;	
+		background: image-url('right_arrow.png') $light no-repeat right;	
     border:none;
     cursor:pointer;
     -webkit-border-radius: 5px;
