@@ -1,6 +1,7 @@
 class BusinessesController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   def index
+    @businesses = Business.all
   end
   
   def new
@@ -18,6 +19,7 @@ class BusinessesController < ApplicationController
   end
   
   def show
+    @businesses = Business.all
   end
   
   def edit
