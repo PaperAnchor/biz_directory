@@ -40,33 +40,29 @@
 			        </script>
 		</header>		
 
-		<h1 id="page_title"><%= business.name %></h1>
+		<h1 id="page_title"><%= @business.name %></h1>
 		
-		<div class="wrapper wrapper_padding clearfix">
+		<div class="wrapper wrapper_padding business clearfix">
 			
-			<div class="contact_info">
-				<img src="images/capitalJeep.png" alt="Capital Jeep Dodge" class="business_logo" /><br>
-				<h3 class="location">9751 34 Avenue</h3>
-				<h3 class="location">Edmonton, AB</h3><br>
-				Phone: 780-111-1111<br>
-				Email: test@capitaljeep.com<br>
-				Website: www.capitaljeep.com<br>
+			<div class="col-1 contact_info business_content">
+				<img src="/assets/capitalJeep.png" alt="Capital Jeep Dodge" class="business_logo" /><br>
+				<h3 class="location"><%= @business.address %></h3>
+				<h3 class="location"><%= @business.city %></h3><br>
+				Phone: <%= @business.phone %><br>
+				Email: <%= @business.email %><br>
+				Website: <%= link_to @business.url, "http://#{@business.url}" %><br>
 				<hr>
-				<input type="submit" value="&#9658;  Listen To Our Latest Commercial" class="button">
+				<input type="submit" value="&#9658; Our Latest Commercial" class="button">
 			</div>
 			
-			<div class="business_content">
+			<div class="col-2 business_content">
 				<h2>About Us</h2>
 				<hr>
-				<p>Whether you are looking for a new or used GMC or Buick car, truck, or SUV you will find it here. We have a wonderful sales and service staff that is ready to make your car buying experience one that you will want to share with your friends and family for years to come. We offer a state-of-the-art facility with a large indoor showroom to provide you with a more comfortable buying experience.</p>
-
-<p>We know that prospective customers are extremely well educated when researching their next vehicle. Capital GMC Buick has made it easy to get all the available vehicle information so you can spend less time researching and more time enjoying your purchase. Check out our Current Promotions for additional savings on your next vehicle.</p>
-
-<p>Our service department features the most current diagnostic and repair equipment available and our highly trained GM technicians will deliver efficient, quality vehicle care every time. You can drop your car off 6 days a week under our fully lit, heated and covered service drive. Our Service Advisors are located on the drive to help streamline your servicing needs.</p>
+				<p><%= @business.description %></p>
 				
 			</div>
 			
-			<div class="search">
+			<div class="col-3 search business_content">
 				<h2>Search For A Business</h2>
 				<hr>
 				<form>
