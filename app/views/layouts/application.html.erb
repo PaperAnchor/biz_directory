@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BizDirectory</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<title>The Edmonton Biz Directory | Corus Radio Edmonton</title>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header id= "main_navigation" class="clearfix">
+		<div id="leftHeader">
+			<a href="#"><img src="logo_biz.png" alt="Edmonton Business Directory" /></a>
+		</div>
+		<div id="rightHeader">
+			<nav>
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Categories</a>
+				<a href="#">Advertise</a>
+			</nav>
+			<form id="searchbox" action="">
+		    	<input id="search" type="text" placeholder="Search Businesses">
+		  		<input id="submit" type="submit" value="&#10148;">
+			</form>
+		</div>
+	</header>
 
 <%= yield %>
 
