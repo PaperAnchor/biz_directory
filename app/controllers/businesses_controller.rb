@@ -41,10 +41,10 @@ class BusinessesController < ApplicationController
   private
   
   def post_params
-    params.require(:business).permit(:name, :address, :city, :postal, :email, :phone, :url, :description, :keywords, :category, :logo, :audio)
+    params.require(:business).permit(:name, :address, :city, :postal, :email, :phone, :url, :description, :keywords, :category, :logo, :audio, :slug)
   end
   
   def find_post
-    @business = Business.find(params[:id])
+    @business = Business.friendly.find(params[:id])
   end
 end
