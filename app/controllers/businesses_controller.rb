@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   def index
-    @businesses = Business.all
+    @businesses = Business.all.paginate(page: params[:page], per_page: 6)
   end
   
   def new
