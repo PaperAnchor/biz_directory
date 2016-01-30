@@ -46,6 +46,13 @@
 		margin: 0 0 .75em 0;
 		font-size: 1rem;
 	}
+	a {
+		text-decoration: none;
+		color: $highlight;
+		&:hover {
+			color: $dark;
+		}
+	}
 	.second_header {
 	  padding-top: 1.6rem;
 	}

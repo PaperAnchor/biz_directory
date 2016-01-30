@@ -5,12 +5,12 @@
 				
 				<% @businesses.each do |business| %>
 					<div class="category_listing clearfix">
-						<img src="images/capitalJeep.png" class="listing_logo" />
+						<img src="assets/capitalJeep.png" class="listing_logo" />
 						<div class="listing_description clearfix">
 							<h2><%= link_to business.name, business %></h2>
 							<p><%=h truncate(business.description, :length => 200, :separator => ' ') %></p>
-							<p><span class="contact_method"><strong>Phone:</strong> <%= business.phone %></span>		<span class="contact_method"><strong>Email:</strong> <%= business.email %></span>		<strong>Website:</strong> <%= business.url %></p>
-							<input type="submit" value="More Details" class="button">
+							<p><span class="contact_method"><strong>Phone:</strong> <%= business.phone %></span>		<span class="contact_method"><strong>Email:</strong> <%= business.email %></span>		<strong>Website:</strong> <%= link_to business.url, "http://#{business.url}" %></p>
+							<%= link_to "More Details", business, class: "button" %>
 						</div>
 					</div>
 					<hr>
