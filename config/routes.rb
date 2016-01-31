@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :businesses
+  resources :businesses do
+    collection do
+      get 'search'
+    end
+  end
   resources :contacts, only: [:new, :create]
   get 'welcome/index'
   root 'welcome#index'

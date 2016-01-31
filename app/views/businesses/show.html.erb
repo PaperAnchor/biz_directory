@@ -76,6 +76,8 @@
 						<option value="value1">Apparel</option>
 						<option value="value2">Automotive</option>
 					</select>
+				</form>
+				<form>	
 					<h6>Search Alphabetically</h6>
 					<select name='alphabet' id="alphabet">
 						<option value="value1">A</option>
@@ -105,10 +107,15 @@
 						<option value="value25">Y</option>
 						<option value="value26">Z</option>
 					</select>
-					<h6>Search By Name</h6>
-		    	<input id="search" type="text" placeholder="Search Businesses">
-		  		<input id="submit" type="submit" value="">
 				</form>
+				<h6>Search By Name</h6>
+					<%= form_tag search_businesses_path, method: :get, role: "search" do %>
+						<p>
+							<%= text_field_tag :search, params[:search], class: "form-control", :placeholder => 'Search Businesses' %>
+							<%= submit_tag ">", name: nil, class: "button" %>
+						</p>
+					<% end %>
+				
 			</div>
 		</div>
 	

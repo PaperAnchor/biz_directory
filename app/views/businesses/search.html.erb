@@ -3,6 +3,7 @@
 		<div class="wrapper wrapper_padding clearfix">
 			<div class="category_wrapper">
 				
+				
 				<% @businesses.each do |business| %>
 					<div class="category_listing clearfix">
 						<img src="assets/capitalJeep.png" class="listing_logo" />
@@ -62,7 +63,7 @@
 					<option value="value25">Y</option>
 					<option value="value26">Z</option>
 				</select>
-				</form>
+			</form>
 				<h6>Search By Name</h6>
 				<%= form_tag search_businesses_path, method: :get, role: "search" do %>
 					<p>
@@ -70,6 +71,7 @@
 						<%= submit_tag ">", name: nil, class: "button" %>
 					</p>
 				<% end %>
+			
 		</div>	   
 	</div>	
 		</div>

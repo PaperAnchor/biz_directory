@@ -108,7 +108,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-		background: url(../images/down_arrow.png) $light no-repeat right;	
+		background: url(../assets/down_arrow.png) $light no-repeat right;	
 		option {
 			padding: 10px 10px;
 		}
@@ -127,7 +127,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-		background: url(../images/down_arrow.png) $light no-repeat right;
+		background: url(../assets/down_arrow.png) $light no-repeat right;
 		option {
 			padding: 0 10px;
 		}
@@ -142,7 +142,7 @@
 	}
 	#submit {
     padding:10px 15px 10px 15px; 
-		background: url(../images/right_arrow.png) $light no-repeat right;	
+		background: url(../assets/right_arrow.png) $light no-repeat right;	
     border:none;
     cursor:pointer;
     -webkit-border-radius: 5px;
