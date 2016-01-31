@@ -45,7 +45,7 @@
 		<div class="wrapper wrapper_padding business clearfix">
 			
 			<div class="col-1 contact_info business_content">
-				<img src="/assets/capitalJeep.png" alt="Capital Jeep Dodge" class="business_logo" /><br>
+				<%= image_tag @business.logo.url(:medium), :class => "business_logo" %>
 				<h3 class="location"><%= @business.address %></h3>
 				<h3 class="location"><%= @business.city %></h3><br>
 				Phone: <%= @business.phone %><br>

@@ -5,7 +5,7 @@
 				
 				<% @businesses.shuffle.each do |business| %>
 					<div class="category_listing clearfix">
-						<img src="assets/capitalJeep.png" class="listing_logo" />
+						<%= image_tag business.logo.url(:medium), :class => "listing_logo" %>
 						<div class="listing_description clearfix">
 							<h2><%= link_to business.name, business %></h2>
 							<p><%=h truncate(business.description, :length => 200, :separator => ' ') %></p>

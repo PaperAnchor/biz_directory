@@ -30,7 +30,7 @@ class BusinessesController < ApplicationController
   end
   
   def show
-    @businesses = Business.all 
+    @businesses = Business.all
   end
   
   def edit

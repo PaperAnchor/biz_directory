@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130191126) do
+ActiveRecord::Schema.define(version: 20160131201335) do
 
   create_table "businesses", force: :cascade do |t|
     t.string   "name"
@@ -26,9 +26,13 @@ ActiveRecord::Schema.define(version: 20160130191126) do
     t.string   "logo"
     t.string   "audio"
     t.string   "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "slug"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "businesses", ["slug"], name: "index_businesses_on_slug", unique: true
