@@ -10,9 +10,9 @@ class CreateBusinesses < ActiveRecord::Migration
       t.string :url
       t.text :description
       t.string :keywords
-      t.string :category
       t.string :logo
       t.string :audio
+      t.string :category_id
 
       t.timestamps null: false
     end

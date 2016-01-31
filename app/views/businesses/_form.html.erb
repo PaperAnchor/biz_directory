@@ -61,12 +61,6 @@
 	<br>
 	<br>
 	
-	<%= f.label :category %><br>
-	<%= f.text_field :category %>
-	
-	<br>
-	<br>
-	
 	<%= f.label :logo %><br>
 	<%= f.text_field :logo %>
 	
@@ -78,6 +72,10 @@
 	
 	<br>
 	<br>
+	
+	<%= f.label :category %><br>
+	<%= f.collection_select :category_id, Category.all, :id, :name %>
+	
 	
 	<%= f.submit %>
 	

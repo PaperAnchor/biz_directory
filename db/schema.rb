@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20160130191126) do
     t.string   "url"
     t.text     "description"
     t.string   "keywords"
-    t.string   "category"
     t.string   "logo"
     t.string   "audio"
+    t.string   "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "slug"
