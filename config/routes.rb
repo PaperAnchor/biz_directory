@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  resources :categories
   resources :contacts, only: [:new, :create]
   get 'welcome/index'
   root 'welcome#index'

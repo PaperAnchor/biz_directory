@@ -3,7 +3,7 @@
 		<div class="wrapper wrapper_padding clearfix">
 			<div class="category_wrapper">
 				
-				<% @businesses.each do |business| %>
+				<% @businesses.shuffle.each do |business| %>
 					<div class="category_listing clearfix">
 						<img src="assets/capitalJeep.png" class="listing_logo" />
 						<div class="listing_description clearfix">
