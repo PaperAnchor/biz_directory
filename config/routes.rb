@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
   resources :categories
   resources :contacts, only: [:new, :create]
+  resources :admin
+  get "admin" => "admin#index"
   get 'welcome/index'
   root 'welcome#index'
   

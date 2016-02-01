@@ -19,7 +19,7 @@
 			<%= link_to "Business Listings", businesses_path %>
 			<%= link_to "Contact", new_contact_path %>
 			<% if user_signed_in? %>
-				<a href="#">Admin</a>
+				<%= link_to "Admin", admin_index_path %>
 				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 			<% end %>
 		</nav>

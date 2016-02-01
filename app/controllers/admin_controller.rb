@@ -1,8 +1,7 @@
-class CategoriesController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+class AdminController < ApplicationController
   
   def index
-   @category = Category.all
+   
   end
   
   def new
@@ -13,17 +12,22 @@ class CategoriesController < ApplicationController
     @category = Category.new post_params
     
     if @category.save
-      redirect_to :categories, notice: "Your Category Has Been Created!"
+      redirect_to :root, notice: "Your Category Has Been Created!"
     else
       render 'new', notice: "Oh no! That didn't work!"
     end
   end
   
   def show
-    @category = Category.all
+    @categories = Category.all 
   end
   
   def edit
+  end
+  
+  def destroy
+    @category.destroy
+    redirect_to category_path
   end
   
   private
@@ -31,5 +35,6 @@ class CategoriesController < ApplicationController
   def post_params
     params.require(:category).permit(:name)
   end
+  
   
 end
