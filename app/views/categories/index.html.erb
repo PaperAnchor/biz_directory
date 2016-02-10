@@ -1,13 +1,6 @@
 <h2 id="page_title">Add A Category</h2>
-	
+
 <div class="skinny_wrapper wrapper_padding">
 	<%= render 'form' %>
-	
-	<% @categories.each do |category| %>
-		<div class="category_listing clearfix">
-			<h2><%= link_to category.name, category %></h2>
-		</div>
-		<hr>
-	<% end %>
-	
+
 </div>
