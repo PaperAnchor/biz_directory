@@ -1,5 +1,6 @@
 class Business < ActiveRecord::Base
   belongs_to :category
+  accepts_nested_attributes_for :category, allow_destroy: true
   
   extend FriendlyId
   friendly_id :name, use: :slugged

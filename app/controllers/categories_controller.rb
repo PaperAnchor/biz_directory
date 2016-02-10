@@ -1,8 +1,7 @@
-class CategoriesController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+class CategoriesController < ApplicationController  
   
   def index
-   @category = Category.all
+   @categories = Category.all
   end
   
   def new
@@ -20,16 +19,30 @@ class CategoriesController < ApplicationController
   end
   
   def show
-    @category = Category.all
+    @categories = Category.all
   end
   
   def edit
   end
   
+  def update
+    if @category.update post_params
+      redirect_to @category, notice: "Yay! The category info has been updated!"
+    else
+      render 'edit'
+    end
+  end
+  
+  def destroy
+    @category.destroy
+    redirect_to businesses_path
+  end
+  
   private
   
   def post_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:id)
   end
+  
   
 end
